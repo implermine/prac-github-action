@@ -38,7 +38,7 @@ jobs:
       # Run Customized Command 1
       - name: Run a customized command 1
         env:
-          environment_name_that_will_use_on_action : ${{ secrets.NAME_ENV2 }}
+          NAME_ENVIRONMENTS_2 : ${{ secrets.NAME_ENV2 }}
         run: |
           echo $environment_name_that_will_use_on_action | sed 's/./& /g' >> docs.txt
           echo ${{ secrets.NAME_REPO }} >> docs.txt
