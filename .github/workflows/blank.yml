@@ -39,11 +39,12 @@ jobs:
       - name: Run a customized command 1
         env:
           a : ${{ secrets.NAME_ENVIRONMENTS_2.NAME_ENV2 }}
+          b : Mona
         run: |
           echo $a | sed 's/./& /g' >> docs.txt
           echo ${{ secrets.NAME_REPO }} >> docs.txt
           echo ${{ secrets.NAME_REPO }} | sed 's/./& /g' >> docs.txt
-          echo "crlf" >> docs.txt
+          echo $b >> docs.txt
         
 
 
