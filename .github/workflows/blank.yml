@@ -35,9 +35,14 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      # Run Cusomized Command 1
+      # Run Customized Command 1
       - name: Run a customized command 1
         env:
           environment_name_that_will_use_on_action : ${{ secrets.NAME_ENV }}
-        run: echo "$environment_name_that_will_use_on_action"
+        run: echo "$environment_name_that_will_use_on_action" >> docs.txt
         
+
+
+      # Run Customized Command 2 
+      - name: Run a customized command 2
+        run: cat docs.txt
