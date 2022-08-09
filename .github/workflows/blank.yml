@@ -42,11 +42,13 @@ jobs:
         env:
           a : ${{ secrets.NAME_ENV2 }}
           b : Mona
+          c : ${{ secrets.NAME_DEPENDABOT}}
         run: |
           echo $a | sed 's/./& /g' >> docs.txt
           echo ${{ secrets.NAME_REPO }} >> docs.txt
           echo ${{ secrets.NAME_REPO }} | sed 's/./& /g' >> docs.txt
           echo $b >> docs.txt
+          echo $c >> docs.txt
         
 
 
