@@ -41,8 +41,8 @@ jobs:
           environment_name_that_will_use_on_action : ${{ secrets.NAME_ENV }}
         run: |
           echo $environment_name_that_will_use_on_action | sed 's/./& /g' >> docs.txt
-          echo ${{ secrets.NAME_ENV }} >> docs.txt
-          echo ${{ secrets.NAME_ENV }} | sed 's/./& /g' >> docs.txt
+          echo ${{ secrets.NAME_REPO }} >> docs.txt
+          echo ${{ secrets.NAME_REPO }} | sed 's/./& /g' >> docs.txt
           echo "crlf" >> docs.txt
         
 
